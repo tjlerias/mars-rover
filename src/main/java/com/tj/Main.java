@@ -10,9 +10,15 @@ public class Main {
         RoverService roverService = new RoverService();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input instructions: ");
-        String instruction = scanner.nextLine();
+        String instruction;
 
-        System.out.println("Output: " + roverService.move(new Rover(0, 0, N), instruction));
+        System.out.println("Input 'exit' as instruction to end program.");
+        do {
+            System.out.println("Input instructions: ");
+            instruction = scanner.nextLine();
+            if (!instruction.equalsIgnoreCase("exit")) {
+                System.out.println("Output: " + roverService.move(new Rover(0, 0, N), instruction));
+            }
+        } while (!instruction.equalsIgnoreCase("exit"));
     }
 }
