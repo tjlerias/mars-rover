@@ -1,7 +1,7 @@
 # Mars Rover Technical Challenge
 
 ## Requirements
-- Java JDK 8 +
+- Java JDK 17
 
 ## Getting Started
 
@@ -9,18 +9,25 @@ To run the app, follow these steps:
 
 1. Clone repository to your local machine.
     ```
-   https://github.com/tjlerias/mars-rover-coding-challenge.git
+   git clone https://github.com/tjlerias/mars-rover-coding-challenge.git
     ```
 2. Open the project using your preferred IDE.
 3. Open terminal to the project's root directory and run `mvn clean install`.
 
+Note: If you are using a Java version other than 17, you can update the Maven compiler source and target versions as follows:
+```
+<maven.compiler.source>{JAVA_VERSION}</maven.compiler.source>
+<maven.compiler.target>{JAVA_VERSION}</maven.compiler.target>
+```
+Replace `{JAVA_VERSION}` with the used Java version.
+
 You have the option to execute the Main class for an interactive program, where you can input the instructions.
 
-Alternatively, you can run the provided tests to ensure that the logic functions as expected.
+Alternatively, you can run the unit tests to ensure that the logic functions as expected.
 
 ## Testing
 
-JUnit and AssertJ is used to validate the test cases for the given problem. You can find the tests in `RoverServiceTest` class
+JUnit and AssertJ is used to validate the test cases for the given problem. You can find the tests in `RoverServiceTest` class.
 
 1. To run tests:
    ```
